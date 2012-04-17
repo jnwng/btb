@@ -1,0 +1,13 @@
+{
+  "locals": {
+    "url": "http://jnwng.com/btb",
+    "name": "Beyond the Book",
+    "owner": "Radhika Gosavi",
+    "description": "Learning can be fun!",
+    "index_articles": 3
+  },
+  "plugins": [
+    "wintersmith-stylus",
+    "wintersmith-coffee"
+  ]
+}

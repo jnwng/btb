@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  - var donate = contents['donate.md']
+  - var index = contents['index.md']
+  - var projects = _.chain(contents.projects._.directories).map(function(item) {
+  -   return item.index
+  - }).compact().sortBy(function(item) { 
+  -   return -item.date
+  - }).first(5).value() 
+  article.content!= index.html
+  each project in projects
+    article.post
+      header
+        h2
+          a(href=project.url)= project.title
+      article.content!= project.intro
+  article.content!= donate.html
