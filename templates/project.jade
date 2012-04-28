@@ -1,13 +1,13 @@
-
-extends layout
-
-block prepend title
-  #{ page.title } -
-
-block header
-  a.back(href='/btb') << back to index
-  h1= page.title
-
-block content
-  article.post
-    section.content!= page.html
+mixin projects()
+  - var projects = _.chain(contents.projects._.directories).map(function(item) {
+  -   return item.index
+  - }).compact().sortBy(function(item) { 
+  -   return -item.date
+  - }).first(5).value() 
+  - console.log(projects)
+  each project in projects
+    article.post
+      header
+        h2
+          a(href=project.url)= project.title
+      article.content!= project.intro

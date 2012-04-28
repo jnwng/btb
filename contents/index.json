@@ -1,3 +1,34 @@
 {
-  "template": "index.jade"
+  "template": "index.jade",
+  "sections": [
+  { 
+    "title": "what we do",
+    "url": "#about",
+    "filename": "about.md"
+  },
+  { 
+    "title": "our mission",
+    "url": "#mission",
+    "filename": "mission.md"
+  },
+  { 
+    "title": "projects",
+    "url": "#projects"
+  },
+  { 
+    "title": "donate",
+    "url": "#donate",
+    "filename": "donate.md"
+  },
+  { 
+    "title": "contact",
+    "url": "#contact",
+    "filename": "contact.md" 
+  },
+  { 
+    "title": "who am i?",
+    "url": "#who_am_i",
+    "filename": "whoami.md"
+  }
+]
 }
